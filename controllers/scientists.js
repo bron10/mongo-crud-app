@@ -70,8 +70,5 @@ function Scientist(){
 	}
 }
 
-console.log("env -- >", process.env)
 module.exports = Scientist();
-//const inst = new Scientist(, );
-//console.log("inst", inst.getAllScientist());
 

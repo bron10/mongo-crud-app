@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "90f9cb27-601d-4e4e-81d0-b8ec4beeac83",
+		"name": "scientify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "update first name and last name of scientist",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"first\": \"tiger\",\n  \"last\": \"scottt\"\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/scientists/5b3c72a389f32ec5c0373dbd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"scientists",
+						"5b3c72a389f32ec5c0373dbd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get single scientist data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/scientists/5b3c72a389f32ec5c0373dbd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"scientists",
+						"5b3c72a389f32ec5c0373dbd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all scientists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/scientists/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"scientists",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post new scientist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiJwYXNzd29yZCIsImlhdCI6MTUzMDcxMDU5MCwiZXhwIjoxNTMwNzE0MTkwfQ.tQ0K9EYQCuKiYr4ukOzlxQtUUlcbnI9fp7APqj-hy-M"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\" : \"viva\",\n    \"lastname\" : \"chc\",\n    \"birth\" : \"1924-12-03T05:00:00Z\",\n    \"death\" : \"2007-03-17T04:00:00Z\",\n    \"contribs\" : [\n        \"C++\"\n    ],\n    \"awards\" : [\n        {\n            \"award\" : \"x y z\",\n            \"year\" : 2000,\n            \"by\" : \"www\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/scientists/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"scientists",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"username\" : \"admin\",\n   \"password\" : \"password\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
