@@ -1,3 +1,4 @@
 module.exports = {
-	scientists  : require('./scientists')
+	scientists  : require('./scientists'),
+	auth : require('./auth')
 }
